@@ -1,0 +1,401 @@
+{
+  "restaurantName": "default",
+  "items": [
+    {
+      "id": "combinado-de-fiambres-y-conservas-x-2-pers",
+      "name": "Combinado de Fiambres y Conservas x 2 Pers.",
+      "category": "starter",
+      "price": "23.000",
+      "description": "Una selección especial de fiambres artesanales y conservas caseras, perfecta para compartir",
+      "ingredients": ["Jamón crudo", "Salame de Oncativo", "Queso Holanda", "Queso Parmesano", "Hongos en escabeche", "Olivas negras", "Tomates confitados", "Pan artesanal"],
+      "preferredWeather": ["warm", "clear"]
+    },
+    {
+      "id": "jamon-crudo",
+      "name": "Jamón Crudo",
+      "category": "starter",
+      "price": "7.700",
+      "description": "Finas lonchas de jamón crudo de primera calidad, curado artesanalmente",
+      "ingredients": ["Jamón crudo", "Sal", "Especias"],
+      "preferredWeather": ["warm", "clear"]
+    },
+    {
+      "id": "lomito-horneado-ahumado",
+      "name": "Lomito Horneado Ahumado",
+      "category": "starter",
+      "price": "5.500",
+      "description": "Lomito tierno horneado con un delicado toque ahumado",
+      "ingredients": ["Lomito de cerdo", "Sal marina", "Hierbas aromáticas"],
+      "preferredWeather": ["warm", "cloudy"]
+    },
+    {
+      "id": "salame-de-oncativo",
+      "name": "Salame de Oncativo",
+      "category": "starter",
+      "price": "6.600",
+      "description": "Auténtico salame de Oncativo, especialidad cordobesa curada artesanalmente",
+      "ingredients": ["Carne de cerdo", "Carne vacuna", "Especias", "Ajo", "Sal"],
+      "preferredWeather": ["warm", "clear"]
+    },
+    {
+      "id": "mortadela-con-pistachos",
+      "name": "Mortadela con Pistachos",
+      "category": "starter",
+      "price": "7.700",
+      "description": "Mortadela premium con pistachos naturales, delicia italiana",
+      "ingredients": ["Carne de cerdo", "Pistachos", "Especias italianas"],
+      "preferredWeather": ["warm", "clear"]
+    },
+    {
+      "id": "queso-holanda",
+      "name": "Queso Holanda",
+      "category": "starter",
+      "price": "6.600",
+      "description": "Queso holanda de textura firme y sabor suave",
+      "ingredients": ["Leche pasteurizada", "Cultivos lácticos", "Cuajo", "Sal"],
+      "preferredWeather": ["warm", "cloudy"]
+    },
+    {
+      "id": "queso-azul",
+      "name": "Queso Azul",
+      "category": "starter",
+      "price": "6.300",
+      "description": "Queso azul de carácter intenso con vetas características",
+      "ingredients": ["Leche", "Penicillium roqueforti", "Sal"],
+      "preferredWeather": ["cold", "cloudy"]
+    },
+    {
+      "id": "queso-parmesano",
+      "name": "Queso Parmesano",
+      "category": "starter",
+      "price": "7.800",
+      "description": "Queso parmesano de larga maduración, intenso y granuloso",
+      "ingredients": ["Leche de vaca", "Cuajo", "Sal"],
+      "preferredWeather": ["warm", "clear"]
+    },
+    {
+      "id": "queso-camembert",
+      "name": "Queso Camembert",
+      "category": "starter",
+      "price": "14.000",
+      "description": "Queso francés de pasta blanda y corteza florida, cremoso y aromático",
+      "ingredients": ["Leche pasteurizada", "Cultivos de moho blanco", "Sal"],
+      "preferredWeather": ["cold", "cloudy"]
+    },
+    {
+      "id": "queso-marinado-en-aceite-ahumado",
+      "name": "Queso Marinado en Aceite Ahumado",
+      "category": "starter",
+      "price": "6.000",
+      "description": "Cubos de queso marinados en aceite de oliva ahumado con hierbas",
+      "ingredients": ["Queso fresco", "Aceite de oliva ahumado", "Hierbas aromáticas", "Ají", "Ajo"],
+      "preferredWeather": ["warm", "clear"]
+    },
+    {
+      "id": "hongos-en-escabeche",
+      "name": "Hongos en Escabeche",
+      "category": "starter",
+      "price": "11.000",
+      "description": "Hongos frescos conservados en escabeche casero con vinagre y especias",
+      "ingredients": ["Hongos frescos", "Vinagre de vino", "Aceite de oliva", "Ají", "Laurel", "Orégano"],
+      "preferredWeather": ["cold", "rainy"]
+    },
+    {
+      "id": "pepinillos-en-vinagre",
+      "name": "Pepinillos en Vinagre",
+      "category": "starter",
+      "price": "4.000",
+      "description": "Pepinillos crujientes encurtidos en vinagre con eneldo",
+      "ingredients": ["Pepinillos", "Vinagre blanco", "Eneldo", "Ajo", "Sal"],
+      "preferredWeather": ["hot", "clear"]
+    },
+    {
+      "id": "olivas-negras-picantes",
+      "name": "Olivas Negras Picantes",
+      "category": "starter",
+      "price": "4.000",
+      "description": "Aceitunas negras marinadas con ají y especias",
+      "ingredients": ["Aceitunas negras", "Ají molido", "Aceite de oliva", "Orégano", "Ajo"],
+      "preferredWeather": ["hot", "clear"]
+    },
+    {
+      "id": "tomates-confitados-al-romero",
+      "name": "Tomates Confitados al Romero",
+      "category": "starter",
+      "price": "5.000",
+      "description": "Tomates cherry confitados con aceite de oliva y romero fresco",
+      "ingredients": ["Tomates cherry", "Aceite de oliva", "Romero fresco", "Ajo", "Sal", "Azúcar"],
+      "preferredWeather": ["hot", "clear"]
+    },
+    {
+      "id": "pimientos-asados",
+      "name": "Pimientos Asados",
+      "category": "starter",
+      "price": "8.000",
+      "description": "Pimientos rojos asados a la parrilla, marinados en aceite de oliva",
+      "ingredients": ["Pimientos rojos", "Aceite de oliva", "Ajo", "Perejil", "Sal"],
+      "preferredWeather": ["hot", "clear"]
+    },
+    {
+      "id": "bife-de-chorizo",
+      "name": "Bife de Chorizo",
+      "category": "main",
+      "price": "18.000",
+      "description": "Corte premium de bife de chorizo, jugoso y tierno, a la parrilla",
+      "ingredients": ["Bife de chorizo", "Sal gruesa", "Pimienta negra"],
+      "preferredWeather": ["clear", "warm"]
+    },
+    {
+      "id": "spaghettis",
+      "name": "Spaghettis",
+      "category": "main",
+      "price": "10.600",
+      "description": "Clásicos spaghettis de pasta fresca elaborados artesanalmente",
+      "ingredients": ["Harina 0000", "Huevos frescos", "Sal", "Agua"],
+      "preferredWeather": ["warm", "clear"]
+    },
+    {
+      "id": "tagliatelles",
+      "name": "Tagliatelles",
+      "category": "main",
+      "price": "10.600",
+      "description": "Pasta fresca en cintas anchas, perfecta para salsas cremosas",
+      "ingredients": ["Harina 0000", "Huevos frescos", "Sal", "Aceite de oliva"],
+      "preferredWeather": ["warm", "clear"]
+    },
+    {
+      "id": "fetuccinis-verdes",
+      "name": "Fetuccinis Verdes",
+      "category": "main",
+      "price": "12.200",
+      "description": "Pasta fresca coloreada naturalmente con espinaca",
+      "ingredients": ["Harina 0000", "Huevos frescos", "Espinaca fresca", "Sal"],
+      "preferredWeather": ["warm", "cloudy"]
+    },
+    {
+      "id": "noquis",
+      "name": "Ñoquis",
+      "category": "main",
+      "price": "11.000",
+      "description": "Suaves y esponjosos ñoquis de papa, tradición italiana",
+      "ingredients": ["Papas", "Harina 0000", "Huevos", "Sal", "Nuez moscada"],
+      "preferredWeather": ["cold", "rainy"]
+    },
+    {
+      "id": "malfattis-de-ricota-y-espinaca",
+      "name": "Malfattis de Ricota y Espinaca",
+      "category": "main",
+      "price": "13.400",
+      "description": "Delicados bocados de ricota artesanal y espinaca fresca",
+      "ingredients": ["Ricota artesanal", "Espinaca fresca", "Harina", "Huevos", "Queso parmesano", "Nuez moscada"],
+      "preferredWeather": ["cold", "cloudy"]
+    },
+    {
+      "id": "ravioles-de-ricota-y-nuez",
+      "name": "Ravioles de Ricota y Nuez",
+      "category": "main",
+      "price": "12.200",
+      "description": "Ravioles rellenos de ricota y nueces, combinación perfecta",
+      "ingredients": ["Masa de pasta fresca", "Ricota artesanal", "Nueces", "Queso parmesano"],
+      "preferredWeather": ["cold", "cloudy"]
+    },
+    {
+      "id": "ravioles-de-ricota-y-espinaca",
+      "name": "Ravioles de Ricota y Espinaca",
+      "category": "main",
+      "price": "12.200",
+      "description": "Ravioles clásicos rellenos de ricota cremosa y espinaca",
+      "ingredients": ["Masa de pasta fresca", "Ricota artesanal", "Espinaca fresca", "Queso parmesano", "Nuez moscada"],
+      "preferredWeather": ["cold", "cloudy"]
+    },
+    {
+      "id": "ravioles-de-carne-y-verdura",
+      "name": "Ravioles de Carne y Verdura",
+      "category": "main",
+      "price": "13.200",
+      "description": "Ravioles con relleno jugoso de carne vacuna y verduras de estación",
+      "ingredients": ["Masa de pasta fresca", "Carne molida", "Espinaca", "Cebolla", "Zanahoria", "Especias"],
+      "preferredWeather": ["cold", "rainy"]
+    },
+    {
+      "id": "sorrentinos-de-ricota-jamon-y-nuez",
+      "name": "Sorrentinos de Ricota, Jamón y Nuez",
+      "category": "main",
+      "price": "13.200",
+      "description": "Sorrentinos rellenos de ricota cremosa, jamón cocido y nueces",
+      "ingredients": ["Masa de pasta fresca", "Ricota artesanal", "Jamón cocido", "Nueces", "Queso parmesano"],
+      "preferredWeather": ["cold", "cloudy"]
+    },
+    {
+      "id": "sorrentinos-de-jamon-y-queso",
+      "name": "Sorrentinos de Jamón y Queso",
+      "category": "main",
+      "price": "14.900",
+      "description": "Combinación clásica de jamón y queso fundente",
+      "ingredients": ["Masa de pasta fresca", "Jamón cocido", "Queso mozzarella", "Ricota", "Queso parmesano"],
+      "preferredWeather": ["cold", "cloudy"]
+    },
+    {
+      "id": "sorrentinos-caprese",
+      "name": "Sorrentinos Caprese",
+      "category": "main",
+      "price": "15.700",
+      "description": "Mozzarella fresca, tomate y albahaca, sabores mediterráneos",
+      "ingredients": ["Masa de pasta fresca", "Mozzarella fresca", "Tomate", "Albahaca", "Ricota", "Aceite de oliva"],
+      "preferredWeather": ["hot", "clear"]
+    },
+    {
+      "id": "sorrentinos-de-cuatro-quesos",
+      "name": "Sorrentinos de Cuatro Quesos",
+      "category": "main",
+      "price": "15.700",
+      "description": "Cuatro variedades de quesos en un relleno cremoso irresistible",
+      "ingredients": ["Masa de pasta fresca", "Mozzarella", "Queso azul", "Queso parmesano", "Queso holanda", "Ricota"],
+      "preferredWeather": ["cold", "rainy"]
+    },
+    {
+      "id": "sorrentinos-de-mozzarella-hongos-y-castanas-de-caju",
+      "name": "Sorrentinos de Mozzarella, Hongos y Castañas de Cajú",
+      "category": "main",
+      "price": "17.800",
+      "description": "Combinación gourmet: mozzarella, hongos salteados y castañas de cajú",
+      "ingredients": ["Masa de pasta fresca", "Mozzarella", "Hongos frescos", "Castañas de cajú", "Ricota", "Ajo"],
+      "preferredWeather": ["cold", "rainy"]
+    },
+    {
+      "id": "sorrentinos-de-salmon-ricota-y-camarones",
+      "name": "Sorrentinos de Salmón, Ricota y Camarones",
+      "category": "main",
+      "price": "17.800",
+      "description": "Exquisitos sorrentinos de mar con salmón ahumado y camarones",
+      "ingredients": ["Masa de pasta fresca", "Salmón ahumado", "Camarones", "Ricota", "Eneldo", "Limón"],
+      "preferredWeather": ["warm", "clear"]
+    },
+    {
+      "id": "sorrentinos-de-jamon-crudo-mozzarella-olivas-negras-y-verdeo",
+      "name": "Sorrentinos de Jamón Crudo, Mozzarella, Olivas Negras y Verdeo",
+      "category": "main",
+      "price": "17.000",
+      "description": "Sabores mediterráneos intensos en perfecta armonía",
+      "ingredients": ["Masa de pasta fresca", "Jamón crudo", "Mozzarella", "Olivas negras", "Cebolla de verdeo", "Ricota"],
+      "preferredWeather": ["warm", "clear"]
+    },
+    {
+      "id": "combinado-de-sorrentinos",
+      "name": "Combinado de Sorrentinos",
+      "category": "main",
+      "price": "17.000",
+      "description": "Selección variada de nuestros mejores sorrentinos",
+      "ingredients": ["Variedad de sorrentinos con diferentes rellenos"],
+      "preferredWeather": ["warm", "cloudy"]
+    },
+    {
+      "id": "canelones-de-carne-y-verduras",
+      "name": "Canelones de Carne y Verduras",
+      "category": "main",
+      "price": "16.500",
+      "description": "Canelones gratinados con relleno de carne molida y verduras",
+      "ingredients": ["Masa de canelones", "Carne molida", "Espinaca", "Cebolla", "Zanahoria", "Salsa bechamel", "Queso"],
+      "preferredWeather": ["cold", "rainy"]
+    },
+    {
+      "id": "canelones-de-cordero-y-espinaca",
+      "name": "Canelones de Cordero y Espinaca",
+      "category": "main",
+      "price": "19.000",
+      "description": "Canelones gourmet con carne de cordero braseada y espinaca",
+      "ingredients": ["Masa de canelones", "Carne de cordero", "Espinaca", "Cebolla", "Vino tinto", "Salsa bechamel", "Queso parmesano"],
+      "preferredWeather": ["cold", "rainy"]
+    },
+    {
+      "id": "canelones-de-crema-de-choclo",
+      "name": "Canelones de Crema de Choclo",
+      "category": "main",
+      "price": "16.500",
+      "description": "Canelones vegetarianos con cremoso relleno de choclo fresco",
+      "ingredients": ["Masa de canelones", "Choclo fresco", "Queso crema", "Cebolla", "Salsa bechamel", "Queso mozzarella"],
+      "preferredWeather": ["cold", "rainy"]
+    },
+    {
+      "id": "panzottis-rossi",
+      "name": "Panzottis Rossi",
+      "category": "main",
+      "price": "15.400",
+      "description": "Calabaza, queso y huevo en masa roja",
+      "ingredients": ["Masa de remolacha", "Calabaza asada", "Queso ricota", "Huevo", "Nuez moscada", "Queso parmesano"],
+      "preferredWeather": ["cold", "cloudy"]
+    },
+    {
+      "id": "panzottis-verdes",
+      "name": "Panzottis Verdes",
+      "category": "main",
+      "price": "15.400",
+      "description": "Ricota, almendras, espinacas y pimientos asados",
+      "ingredients": ["Masa de espinaca", "Ricota artesanal", "Almendras tostadas", "Espinaca", "Pimientos asados", "Ajo"],
+      "preferredWeather": ["cold", "cloudy"]
+    },
+    {
+      "id": "creste-di-gallo",
+      "name": "Creste di Gallo",
+      "category": "main",
+      "price": "17.000",
+      "description": "Pasta rellena con berenjenas ahumadas, ricota artesanal, queso parmesano y tomillo",
+      "ingredients": ["Masa de pasta fresca", "Berenjenas ahumadas", "Ricota artesanal", "Queso parmesano", "Tomillo"],
+      "preferredWeather": ["cold", "cloudy"]
+    },
+    {
+      "id": "tortellinis-de-ricota-chorizo-colorado-panceta-ahumada-queso-parmesano-y-puerro-ahumado",
+      "name": "Tortellinis de Ricota, Chorizo Colorado, Panceta Ahumada, Queso Parmesano y Puerro Ahumado",
+      "category": "main",
+      "price": "19.200",
+      "description": "Tortellinis premium con relleno complejo y sabroso",
+      "ingredients": ["Masa de pasta fresca", "Ricota", "Chorizo colorado", "Panceta ahumada", "Queso parmesano", "Puerro ahumado"],
+      "preferredWeather": ["cold", "rainy"]
+    },
+    {
+      "id": "lasana-tradicional",
+      "name": "Lasaña Tradicional",
+      "category": "main",
+      "price": "17.000",
+      "description": "Clásica lasaña italiana con boloñesa, bechamel y queso gratinado",
+      "ingredients": ["Placas de pasta fresca", "Salsa boloñesa", "Salsa bechamel", "Queso mozzarella", "Queso parmesano"],
+      "preferredWeather": ["cold", "rainy"]
+    },
+    {
+      "id": "flan-casero",
+      "name": "Flan Casero",
+      "category": "dessert",
+      "price": "5.100",
+      "description": "Flan tradicional cremoso y suave con caramelo casero",
+      "ingredients": ["Huevos", "Leche", "Azúcar", "Esencia de vainilla", "Caramelo"],
+      "preferredWeather": ["warm", "clear"]
+    },
+    {
+      "id": "tiramisu",
+      "name": "Tiramisú",
+      "category": "dessert",
+      "price": "6.900",
+      "description": "Clásico postre italiano con café, mascarpone y cacao",
+      "ingredients": ["Bizcochos vainilla", "Café expresso", "Mascarpone", "Huevos", "Azúcar", "Cacao amargo"],
+      "preferredWeather": ["cold", "cloudy"]
+    },
+    {
+      "id": "bombon-escoces",
+      "name": "Bombón Escocés",
+      "category": "dessert",
+      "price": "7.000",
+      "description": "Helado - Bombón helado cubierto de chocolate con dulce de leche",
+      "ingredients": ["Helado de crema", "Dulce de leche", "Cobertura de chocolate", "Almendras"],
+      "preferredWeather": ["hot", "clear"]
+    },
+    {
+      "id": "copa-helada",
+      "name": "Copa Helada",
+      "category": "dessert",
+      "price": "9.000",
+      "description": "Brownie, frutos secos, helado y ron",
+      "ingredients": ["Brownie de chocolate", "Helado de crema", "Nueces", "Almendras", "Ron", "Crema batida", "Salsa de chocolate"],
+      "preferredWeather": ["hot", "clear"]
+    }
+  ]
+}
