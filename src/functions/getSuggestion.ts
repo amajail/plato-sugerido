@@ -15,6 +15,7 @@ export async function getSuggestion(
     const weatherApiKey = process.env.WEATHER_API_KEY;
     const location = process.env.RESTAURANT_LOCATION || 'Córdoba';
     const restaurantName = process.env.RESTAURANT_NAME || 'default';
+    const outputLanguage = process.env.OUTPUT_LANGUAGE || 'English';
 
     if (!storageConnectionString || !openaiApiKey || !weatherApiKey) {
       return {
@@ -23,44 +24,54 @@ export async function getSuggestion(
       };
     }
 
-    const tableService = new TableStorageService(storageConnectionString);
-    const weatherService = new WeatherService(weatherApiKey);
-    const openaiService = new OpenAIService(openaiApiKey);
+    // Create a timeout promise that rejects after 30 seconds
+    const timeoutPromise = new Promise<HttpResponseInit>((_, reject) =>
+      setTimeout(() => reject(new Error('Request timeout: Operation took too long')), 30000)
+    );
 
-    context.log(`Fetching menu for restaurant: ${restaurantName}`);
-    const menu = await tableService.getMenu(restaurantName);
+    // Race the actual operation against the timeout
+    const operationPromise = (async () => {
+      const tableService = new TableStorageService(storageConnectionString);
+      const weatherService = new WeatherService(weatherApiKey);
+      const openaiService = new OpenAIService(openaiApiKey);
 
-    if (!menu) {
-      return {
-        status: 404,
-        jsonBody: { error: `Menu not found for restaurant: ${restaurantName}` },
+      context.log(`Fetching menu for restaurant: ${restaurantName}`);
+      const menu = await tableService.getMenu(restaurantName);
+
+      if (!menu) {
+        return {
+          status: 404,
+          jsonBody: { error: `Menu not found for restaurant: ${restaurantName}` },
+        };
+      }
+
+      context.log(`Fetching weather for location: ${location}`);
+      const weather = await weatherService.getCurrentWeather(location);
+
+      context.log('Generating menu suggestion with OpenAI');
+      const suggestion = await openaiService.suggestMenu(menu, weather, outputLanguage);
+
+      const menuSuggestion = {
+        date: new Date().toISOString().split('T')[0],
+        weather,
+        suggestions: {
+          starter: suggestion.starter,
+          mainDish: suggestion.mainDish,
+          dessert: suggestion.dessert,
+        },
+        reasoning: suggestion.reasoning,
       };
-    }
 
-    context.log(`Fetching weather for location: ${location}`);
-    const weather = await weatherService.getCurrentWeather(location);
+      context.log('Saving suggestion to table storage');
+      await tableService.saveSuggestion(menuSuggestion);
 
-    context.log('Generating menu suggestion with OpenAI');
-    const suggestion = await openaiService.suggestMenu(menu, weather);
+      return {
+        status: 200,
+        jsonBody: menuSuggestion,
+      };
+    })();
 
-    const menuSuggestion = {
-      date: new Date().toISOString().split('T')[0],
-      weather,
-      suggestions: {
-        starter: suggestion.starter,
-        mainDish: suggestion.mainDish,
-        dessert: suggestion.dessert,
-      },
-      reasoning: suggestion.reasoning,
-    };
-
-    context.log('Saving suggestion to table storage');
-    await tableService.saveSuggestion(menuSuggestion);
-
-    return {
-      status: 200,
-      jsonBody: menuSuggestion,
-    };
+    return await Promise.race([operationPromise, timeoutPromise]);
   } catch (error) {
     context.error('Error processing request:', error);
     return {

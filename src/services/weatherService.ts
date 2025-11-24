@@ -17,6 +17,7 @@ export class WeatherService {
           appid: this.apiKey,
           units: 'metric',
         },
+        timeout: 10000,
       });
 
       const data = response.data;
@@ -42,6 +43,7 @@ export class WeatherService {
           appid: this.apiKey,
           units: 'metric',
         },
+        timeout: 10000,
       });
 
       const data = response.data;

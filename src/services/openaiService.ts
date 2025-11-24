@@ -10,7 +10,8 @@ export class OpenAIService {
 
   async suggestMenu(
     menu: Menu,
-    weather: WeatherData
+    weather: WeatherData,
+    language: string = 'English'
   ): Promise<{ starter: MenuItem; mainDish: MenuItem; dessert: MenuItem; reasoning: string }> {
     const starters = menu.items.filter((item) => item.category === 'starter');
     const mainDishes = menu.items.filter((item) => item.category === 'main');
@@ -48,7 +49,9 @@ Consider factors like:
 - Hot weather → lighter, refreshing dishes and cold/frozen desserts
 - Cold weather → hearty, warming dishes and warm/creamy desserts
 - Rainy weather → comfort food
-- Clear weather → fresh, vibrant options`;
+- Clear weather → fresh, vibrant options
+
+IMPORTANT: Respond in ${language}. The "reasoning" field must be written in ${language}.`;
 
     try {
       const response = await this.client.chat.completions.create({
@@ -56,7 +59,7 @@ Consider factors like:
         messages: [
           {
             role: 'system',
-            content: 'You are a helpful restaurant menu curator who suggests dishes based on weather conditions. Always respond with valid JSON.',
+            content: `You are a helpful restaurant menu curator who suggests dishes based on weather conditions. Always respond with valid JSON. Respond in ${language}.`,
           },
           {
             role: 'user',

@@ -20,8 +20,20 @@ export class TableStorageService {
   }
 
   async initialize(): Promise<void> {
-    await this.menuTableClient.createTable();
-    await this.suggestionTableClient.createTable();
+    try {
+      await this.menuTableClient.createTable();
+    } catch (error: any) {
+      if (error.code !== 'TableAlreadyExists') {
+        throw error;
+      }
+    }
+    try {
+      await this.suggestionTableClient.createTable();
+    } catch (error: any) {
+      if (error.code !== 'TableAlreadyExists') {
+        throw error;
+      }
+    }
   }
 
   async saveMenu(menu: Menu): Promise<void> {
@@ -38,12 +50,27 @@ export class TableStorageService {
 
   async getMenu(restaurantName: string): Promise<Menu | null> {
     try {
-      const entity = await this.menuTableClient.getEntity<MenuEntity>(
-        'menu',
-        restaurantName
-      );
-      return JSON.parse(entity.menuData);
+      // Add a timeout to prevent hanging
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 10000);
+
+      try {
+        const entity = await this.menuTableClient.getEntity<MenuEntity>(
+          'menu',
+          restaurantName,
+          { abortSignal: controller.signal }
+        );
+        clearTimeout(timeoutId);
+        return JSON.parse(entity.menuData);
+      } catch (error: any) {
+        clearTimeout(timeoutId);
+        if (error.name === 'AbortError' || error.code === 'ResourceNotFound') {
+          return null;
+        }
+        throw error;
+      }
     } catch (error) {
+      console.error('Error fetching menu:', error);
       return null;
     }
   }
