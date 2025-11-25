@@ -130,8 +130,14 @@ body {
 .weather-info {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
     flex-wrap: wrap;
+}
+
+.weather-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .weather-temp {

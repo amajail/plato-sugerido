@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import WeatherIcon from './WeatherIcon'
 
 const API_URL = import.meta.env.VITE_API_URL || 'https://platosugerido-func.azurewebsites.net/api';
 
@@ -85,6 +86,7 @@ function App() {
               <h2 className="section-title">Clima en {suggestion.weather.location}</h2>
               <div className="weather-card">
                 <div className="weather-info">
+                  <WeatherIcon condition={suggestion.weather.condition} size={80} />
                   <div className="weather-temp">{suggestion.weather.temperature}°C</div>
                   <div className="weather-details">
                     <div className="weather-condition">{suggestion.weather.condition}</div>
