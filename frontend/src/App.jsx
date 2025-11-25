@@ -118,13 +118,6 @@ function App() {
                 <p className="reasoning-text">{suggestion.reasoning}</p>
               </div>
             </div>
-
-            {/* Refresh Button */}
-            <div className="button-container">
-              <button onClick={fetchSuggestion} className="load-button">
-                Actualizar Sugerencia
-              </button>
-            </div>
           </>
         )}
       </main>
