@@ -35,7 +35,14 @@ function App() {
     <div className="app">
       {/* Header */}
       <header className="header">
+        <div className="header-decoration header-decoration-left">
+          <img src="/img/dibujo2.png" alt="" className="decoration-img" />
+        </div>
+        <div className="header-decoration header-decoration-right">
+          <img src="/img/dibujo1.png" alt="" className="decoration-img" />
+        </div>
         <div className="header-content">
+          <img src="/img/logo.png" alt="Augusto Pastas" className="logo" />
           <h1>AUGUSTO PASTAS</h1>
           <p className="subtitle">Sugerencia del Día</p>
         </div>
