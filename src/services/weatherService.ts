@@ -5,8 +5,31 @@ export class WeatherService {
   private apiKey: string;
   private baseUrl = 'https://api.openweathermap.org/data/2.5/weather';
 
+  // Translation map for weather conditions to Spanish
+  private conditionTranslations: { [key: string]: string } = {
+    'Clear': 'Despejado',
+    'Clouds': 'Nublado',
+    'Rain': 'Lluvia',
+    'Drizzle': 'Llovizna',
+    'Thunderstorm': 'Tormenta',
+    'Snow': 'Nieve',
+    'Mist': 'Neblina',
+    'Smoke': 'Humo',
+    'Haze': 'Bruma',
+    'Dust': 'Polvo',
+    'Fog': 'Niebla',
+    'Sand': 'Arena',
+    'Ash': 'Ceniza',
+    'Squall': 'Turbonada',
+    'Tornado': 'Tornado',
+  };
+
   constructor(apiKey: string) {
     this.apiKey = apiKey;
+  }
+
+  private translateCondition(condition: string): string {
+    return this.conditionTranslations[condition] || condition;
   }
 
   async getCurrentWeather(location: string): Promise<WeatherData> {
@@ -16,6 +39,7 @@ export class WeatherService {
           q: location,
           appid: this.apiKey,
           units: 'metric',
+          lang: 'es',
         },
         timeout: 10000,
       });
@@ -24,7 +48,7 @@ export class WeatherService {
 
       return {
         temperature: Math.round(data.main.temp),
-        condition: data.weather[0].main,
+        condition: this.translateCondition(data.weather[0].main),
         description: data.weather[0].description,
         humidity: data.main.humidity,
         location: data.name,
@@ -42,6 +66,7 @@ export class WeatherService {
           lon,
           appid: this.apiKey,
           units: 'metric',
+          lang: 'es',
         },
         timeout: 10000,
       });
@@ -50,7 +75,7 @@ export class WeatherService {
 
       return {
         temperature: Math.round(data.main.temp),
-        condition: data.weather[0].main,
+        condition: this.translateCondition(data.weather[0].main),
         description: data.weather[0].description,
         humidity: data.main.humidity,
         location: data.name,
