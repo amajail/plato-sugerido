@@ -121,16 +121,16 @@ body {
 
 .weather-card {
     background: var(--background-color);
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 8px;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     border-left: 4px solid var(--primary-color);
 }
 
 .weather-info {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
     flex-wrap: wrap;
 }
 
@@ -141,7 +141,7 @@ body {
 }
 
 .weather-temp {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: var(--primary-color);
 }
@@ -151,14 +151,14 @@ body {
 }
 
 .weather-condition {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 500;
     color: var(--text-color);
 }
 
 .weather-location {
     color: var(--text-light);
-    font-size: 0.95rem;
+    font-size: 0.85rem;
 }
 
 .menu-item {

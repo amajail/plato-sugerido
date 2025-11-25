@@ -90,7 +90,7 @@ function App() {
               <h2 className="section-title">Clima en {suggestion.weather.location}</h2>
               <div className="weather-card">
                 <div className="weather-info">
-                  <WeatherIcon condition={suggestion.weather.condition} size={80} />
+                  <WeatherIcon condition={suggestion.weather.condition} size={50} />
                   <div className="weather-temp">{suggestion.weather.temperature}°C</div>
                   <div className="weather-details">
                     <div className="weather-condition">{suggestion.weather.condition}</div>
@@ -106,6 +106,12 @@ function App() {
             <div className="section">
               <h2 className="section-title">Menú Sugerido</h2>
 
+              {/* Reasoning */}
+              <div className="reasoning-box">
+                <h4 className="reasoning-title">¿Por qué esta combinación?</h4>
+                <p className="reasoning-text">{suggestion.reasoning}</p>
+              </div>
+              
               {/* Starter */}
               <h3 className="subsection-title">Entrada</h3>
               <MenuItem item={suggestion.suggestions.starter} />
@@ -117,12 +123,6 @@ function App() {
               {/* Dessert */}
               <h3 className="subsection-title">Postre</h3>
               <MenuItem item={suggestion.suggestions.dessert} />
-
-              {/* Reasoning */}
-              <div className="reasoning-box">
-                <h4 className="reasoning-title">¿Por qué esta combinación?</h4>
-                <p className="reasoning-text">{suggestion.reasoning}</p>
-              </div>
             </div>
           </>
         )}
