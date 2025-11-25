@@ -73,12 +73,16 @@ function App() {
           <>
             {/* Date Display */}
             <div className="date-display">
-              <p>{new Date(suggestion.date).toLocaleDateString('es-AR', {
-                weekday: 'long',
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-              })}</p>
+              <p>{(() => {
+                const [year, month, day] = suggestion.date.split('-');
+                const date = new Date(year, month - 1, day);
+                return date.toLocaleDateString('es-AR', {
+                  weekday: 'long',
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                });
+              })()}</p>
             </div>
 
             {/* Weather Card */}
